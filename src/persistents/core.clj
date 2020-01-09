@@ -22,10 +22,11 @@
   ([filename initial]
    (hdd-synced-atom filename initial false))
   ([filename initial replace?]
-   (let [-a (atom (if replace?
-                    initial
-                    (or (<-disk filename) initial)))]
-     (->disk filename initial)
+   (let [actual-initial (if replace?
+                          initial
+                          (or (<-disk filename) initial))
+         -a (atom actual-initial)]
+     (->disk filename actual-initial)
      (add-watch -a (keyword (str filename "-atom-watcher"))
        (fn [key atom old-state new-state]
          (->disk filename new-state))))))

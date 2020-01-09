@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+
+## [0.1.3] - 2020-01-09
+### Fixes
+- Major fixes for hdd-synced-atom.
+
 ## [0.1.2] - 2020-01-09
 ### Added
 - Create parent directories for name.
@@ -13,6 +18,7 @@ All notable changes to this project will be documented in this file. This change
 ### Added
 - Library initial
 
+[0.1.3]: https://github.com/evilsneer/clj-persistents/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/evilsneer/clj-persistents/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/evilsneer/clj-persistents/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/evilsneer/clj-persistents/compare/9115d166b300bcc211c857ff19fe918f9ea630d0...0.1.0
