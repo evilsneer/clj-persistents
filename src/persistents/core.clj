@@ -11,6 +11,7 @@
 
 (defn ->disk [name item]
   (locking name
+    (io/make-parents name)
     (->> item
      str
      (spit name))))

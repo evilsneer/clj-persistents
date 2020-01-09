@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## [0.1.2] - 2020-01-09
+### Added
+- Create parent directories for name.
+
 ## [0.1.1] - 2020-01-09
 ### Changed
 - 2-arity hdd-synced-atom call = "Try set initial only if file does not exist (or has no content or nil), else read from file"
@@ -9,5 +13,6 @@ All notable changes to this project will be documented in this file. This change
 ### Added
 - Library initial
 
-[0.1.1]: https://github.com/your-name/persistents/compare/0.1.0...0.1.1
-[0.1.0]: https://github.com/your-name/persistents/0.1.0
+[0.1.2]: https://github.com/evilsneer/clj-persistents/compare/0.1.1...0.1.2
+[0.1.1]: https://github.com/evilsneer/clj-persistents/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/evilsneer/clj-persistents/compare/9115d166b300bcc211c857ff19fe918f9ea630d0...0.1.0
