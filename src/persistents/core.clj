@@ -19,7 +19,7 @@
   ([filename]
    (hdd-synced-atom filename (<-disk filename)))
   ([filename initial]
-   (hdd-synced-atom filename initial true))
+   (hdd-synced-atom filename initial false))
   ([filename initial replace?]
    (let [-a (atom (if replace?
                     initial

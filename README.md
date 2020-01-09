@@ -5,10 +5,14 @@ A Clojure library designed to provide useful utils for disk-persistents realisat
 ## Usage
 
     (defonce topics (hdd-synced-atom "files/topics.edn"))
-    ; Try set initial every time
-    (defonce user->topics (hdd-synced-atom "files/user-topics.edn" {:user1 "loool"}))
     ; Try set initial only if file does not exist (or has no content or nil), else read from file
-    (defonce user->topics (hdd-synced-atom "files/user-topics.edn" {:user1 "loool"} false))
+    (defonce user->topics (hdd-synced-atom "files/user-topics.edn" {:user1 "loool"}))
+    ; Try set initial every time
+    (defonce user->topics (hdd-synced-atom "files/user-topics.edn" {:user1 "loool"} true))
+
+## Versions 
+
+See `CHANGELOG.md`
 
 ## License
 
