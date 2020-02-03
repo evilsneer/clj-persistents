@@ -11,7 +11,7 @@
   :repl-options {:init-ns persistents.core})
 
 
-(cemerick.pomegranate.aether/register-wagon-factory!
-  "scp" #(clojure.lang.Reflector/invokeConstructor
-           (resolve 'org.apache.maven.wagon.providers.ssh.external.ScpExternalWagon)
-           (into-array [])))
+;(cemerick.pomegranate.aether/register-wagon-factory!
+;  "scp" #(clojure.lang.Reflector/invokeConstructor
+;           (resolve 'org.apache.maven.wagon.providers.ssh.external.ScpExternalWagon)
+;           (into-array [])))

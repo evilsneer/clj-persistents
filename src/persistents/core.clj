@@ -10,11 +10,12 @@
       read-string)))
 
 (defn ->disk [name item]
-  (locking name
-    (io/make-parents name)
-    (->> item
-     str
-     (spit name))))
+  (binding [*print-dup* true]
+    (locking name
+     (io/make-parents name)
+     (->> item
+       pr-str
+       (spit name)))))
 
 (defn hdd-synced-atom
   ([filename]
@@ -25,7 +26,7 @@
    (let [actual-initial (if replace?
                           initial
                           (or (<-disk filename) initial))
-         -a (atom actual-initial)]
+         -a             (atom actual-initial)]
      (->disk filename actual-initial)
      (add-watch -a (keyword (str filename "-atom-watcher"))
        (fn [key atom old-state new-state]
