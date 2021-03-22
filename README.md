@@ -1,6 +1,6 @@
 # persistents
 
-A Clojure library designed to provide useful utils for disk-persistents realisation.
+A Clojure library designed to provide useful utils for disk-persistents realization.
 
 ## Usage
 
