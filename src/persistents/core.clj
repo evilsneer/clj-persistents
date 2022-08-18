@@ -1,5 +1,6 @@
 (ns persistents.core
-  (:require [clojure.java.io :as io]))
+  (:require [clojure.java.io :as io]
+            [clojure.edn :as edn]))
 
 (def exists (memfn exists))
 
@@ -7,7 +8,7 @@
   (if (exists (io/file name))
     (-> name
       slurp
-      read-string)))
+      edn/read-string)))
 
 (defn ->disk [name item]
   (binding [*print-dup* true]
